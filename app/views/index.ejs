@@ -23,14 +23,13 @@
     
     <!-- New member form -->
     <h2>Ajouter un(e) Argonaute</h2>
-    <form class="new-member-form">
+    <form class="new-member-form" action="/" method="post">
       <label for="name">Nom de l&apos;Argonaute</label>
       <input id="name" name="name" type="text" placeholder="Charalampos" />
       <button type="submit">Envoyer</button>
     </form>
     
     <!-- Member list -->
-    <% console.log(crew) %>
     <h2>Membres de l'équipage</h2>
     <section class="member-list">
       <% crew.forEach(member => { %>

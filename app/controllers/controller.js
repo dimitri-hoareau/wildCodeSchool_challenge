@@ -13,7 +13,23 @@ const controllers = {
                 });
             }
     });
-  },     
+  },
+
+  submitForm: (req, res) => {
+        
+    const memberName = req.body.name;
+    console.log(memberName);
+
+    dataMapper.addNewMember(memberName, (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.redirect('/');
+        }
+    });
+
+
+},
 
 };
 
