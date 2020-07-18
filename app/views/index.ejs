@@ -30,11 +30,12 @@
     </form>
     
     <!-- Member list -->
+    <% console.log(crew) %>
     <h2>Membres de l'équipage</h2>
     <section class="member-list">
-      <div class="member-item">Eleftheria</div>
-      <div class="member-item">Gennadios</div>
-      <div class="member-item">Lysimachos</div>
+      <% crew.forEach(member => { %>
+      <div class="member-item"><%= member.name %></div>
+      <% });%>
     </section>
   </main>
   

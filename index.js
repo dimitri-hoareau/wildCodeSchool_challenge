@@ -1,5 +1,7 @@
 const express = require('express');
 
+require('dotenv').config()
+
 const router = require('./app/router');
 
 const app = express();
@@ -12,4 +14,11 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(router);
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000, _ => {
+    console.log(`Le server est accessible sur http://localhost:${process.env.PORT}`);
+});
+
+// reste à 
+// créer une base de donnée
+// la brancher 
+// ajouter les membres
