@@ -21,7 +21,3 @@ app.listen(process.env.PORT || 3000, _ => {
     console.log(`Le server est accessible sur http://localhost:${process.env.PORT}`);
 });
 
-// reste à 
-// créer une base de donnée
-// la brancher 
-// ajouter les membres
